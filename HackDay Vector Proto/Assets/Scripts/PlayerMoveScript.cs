@@ -14,14 +14,15 @@ public class PlayerMoveScript : MonoBehaviour {
     private Rigidbody2D rb2d;
     private float raycastDistance = 0.5f;
     private int groundLayerMask;
-
+    private JetScript jetScript;
 
 	// Use this for initialization
 	void Start () {
 		rb2d = gameObject.GetComponent<Rigidbody2D>();
         groundLayerMask = LayerMask.GetMask("Ground & Platforms");
         vel = rb2d.velocity;
-
+        Transform jetObject = transform.Find("JetObject");
+        jetScript = jetObject.gameObject.GetComponent<JetScript>();
 	}
 
     void Update(){
@@ -79,13 +80,24 @@ public class PlayerMoveScript : MonoBehaviour {
     public void Move(){
         if(Input.GetKeyDown("j")){
             rb2d.AddForce(smallBoostPower * direction.normalized, ForceMode2D.Impulse);
+            JetPosUpdate();
         }
         if(Input.GetKeyDown("k")){
             rb2d.AddForce(bigBoostPower * direction.normalized, ForceMode2D.Impulse);
+            JetPosUpdate();
         }
+    }
+
+    public void JetPosUpdate(){
+        float angle = Vector2.Angle(new Vector2(1.0f, 0.0f), direction);
+        if(direction.y < 0f){
+            angle = 360 - angle;
+        }
+        jetScript.JetPosUpdate(angle);
     }
 
     public void OnColliderEnter2D(Collision collision){
 
     }
+
 }
