@@ -28,12 +28,14 @@ public class JetScript : MonoBehaviour {
 	}
 
     public void Activate(){
+        Debug.Log("Jets Activated");
         jetImage.enabled = true;
         collider.enabled = true;
         jetStart = Time.time;
     }
 
     public void Deactivate(){
+        Debug.Log("Deactivated");
         jetImage.enabled = false;
         collider.enabled = false;
     }
@@ -44,5 +46,11 @@ public class JetScript : MonoBehaviour {
         transform.Rotate(new Vector3(0f, 0f, angle - 90f));
         transform.localPosition = new Vector3(0f, 0f, 0f);
         transform.localPosition += new Vector3(Mathf.Cos((angle/360f) * Mathf.PI * 2), Mathf.Sin((angle/360f) * Mathf.PI * 2), 0f) * -8f;
+    }
+
+    public void OnTriggerEnter2D(Collider2D collider){
+        if(collider.tag == "Enemy"){
+            Debug.Log("Jet thruster hit an enemy!");
+        }
     }
 }
