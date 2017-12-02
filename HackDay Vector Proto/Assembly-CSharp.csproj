@@ -51,8 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CamScript.cs" />
-     <Compile Include="Assets\PlayerMoveScript.cs" />
+     <Compile Include="Assets\Scripts\CamScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerMoveScript.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

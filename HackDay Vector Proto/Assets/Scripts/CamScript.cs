@@ -28,6 +28,7 @@ public class CamScript : MonoBehaviour {
 
         Vector2 charApproxPos = new Vector2(playerTransform.position.x, playerTransform.position.y);
         charApproxPos += playerChar.GetComponent<Rigidbody2D>().velocity * Time.deltaTime * lookAhead;
+
         Vector3 endPos = new Vector3(charApproxPos.x, charApproxPos.y, camZPos);
 
         transform.position = Vector3.Lerp(transform.position, endPos, lerpRatio);

@@ -193,6 +193,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 50702166209670518, guid: ac0282cc55c14428c93eab6b62b21b52,
+        type: 2}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50702166209670518, guid: ac0282cc55c14428c93eab6b62b21b52,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 1.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 114196644263731140, guid: ac0282cc55c14428c93eab6b62b21b52,
+        type: 2}
+      propertyPath: smallBoostPower
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114196644263731140, guid: ac0282cc55c14428c93eab6b62b21b52,
+        type: 2}
+      propertyPath: bigBoostPower
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 50702166209670518, guid: ac0282cc55c14428c93eab6b62b21b52,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac0282cc55c14428c93eab6b62b21b52, type: 2}
   m_IsPrefabParent: 0
