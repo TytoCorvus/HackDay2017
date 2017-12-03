@@ -28,14 +28,12 @@ public class JetScript : MonoBehaviour {
 	}
 
     public void Activate(){
-        Debug.Log("Jets Activated");
         jetImage.enabled = true;
         collider.enabled = true;
         jetStart = Time.time;
     }
 
     public void Deactivate(){
-        Debug.Log("Deactivated");
         jetImage.enabled = false;
         collider.enabled = false;
     }

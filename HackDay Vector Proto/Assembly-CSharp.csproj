@@ -51,9 +51,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\JetScript.cs" />
      <Compile Include="Assets\Scripts\CamScript.cs" />
+     <Compile Include="Assets\Scripts\EnemyMoveScript.cs" />
+     <Compile Include="Assets\Scripts\JetScript.cs" />
+     <Compile Include="Assets\Scripts\LoseAreaScript.cs" />
      <Compile Include="Assets\Scripts\PlayerMoveScript.cs" />
+     <Compile Include="Assets\Scripts\ScoreScript.cs" />
+     <Compile Include="Assets\Scripts\WallScript.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

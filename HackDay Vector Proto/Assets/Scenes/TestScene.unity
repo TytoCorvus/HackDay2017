@@ -211,7 +211,7 @@ Prefab:
     - target: {fileID: 114196644263731140, guid: ac0282cc55c14428c93eab6b62b21b52,
         type: 2}
       propertyPath: bigBoostPower
-      value: 35
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 50702166209670518, guid: ac0282cc55c14428c93eab6b62b21b52,
         type: 2}
@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 958caa420d5c241f59d6c0e966594b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeTime: 0
+  activeTime: 0.35
 --- !u!1 &1821269303 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1258455612044078, guid: ac0282cc55c14428c93eab6b62b21b52,
