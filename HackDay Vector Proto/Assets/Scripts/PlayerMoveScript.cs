@@ -8,6 +8,7 @@ public class PlayerMoveScript : MonoBehaviour {
     [SerializeField] public Vector2 vel;
     [SerializeField] public Vector2 direction = new Vector2(0f, 0f);
     [SerializeField] public float smallBoostPower;
+    [SerializeField] public GameObject jetPrefab;
     [SerializeField] public float bigBoostPower;
 
     private static float degrees = 45f;
@@ -15,18 +16,20 @@ public class PlayerMoveScript : MonoBehaviour {
     private float raycastDistance = 0.5f;
     private int groundLayerMask;
     private JetScript jetScript;
+    private GameObject jetObject;
 
 	// Use this for initialization
 	void Start () {
 		rb2d = gameObject.GetComponent<Rigidbody2D>();
         groundLayerMask = LayerMask.GetMask("Ground & Platforms");
         vel = rb2d.velocity;
-        Transform jetObject = transform.Find("JetObject");
-        jetScript = jetObject.gameObject.GetComponent<JetScript>();
+        jetObject = Instantiate(jetPrefab);
+        jetScript = jetObject.GetComponent<JetScript>();
 	}
 
     void Update(){
         UpdateInput();
+        jetObject.transform.position = gameObject.transform.position;
     }
 
 	// Update is called once per frame

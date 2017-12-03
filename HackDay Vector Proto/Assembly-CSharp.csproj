@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\PlayerMoveScript.cs" />
      <Compile Include="Assets\Scripts\ScoreScript.cs" />
      <Compile Include="Assets\Scripts\WallScript.cs" />
+     <Compile Include="Assets\SpawnerScript.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

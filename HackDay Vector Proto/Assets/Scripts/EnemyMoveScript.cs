@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,15 +29,13 @@ public class EnemyMoveScript : MonoBehaviour
 
     void Update()
     {
-        //UpdateInput();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        //CheckIsGrounded();
+        UpdateStrat();
         Move();
-        //UpdateSpeed();
         vel = rb2d.velocity;
     }
 
@@ -55,44 +53,6 @@ public class EnemyMoveScript : MonoBehaviour
         }
     }
 
-    /*public void UpdateInput()
-    {
-        if (Input.GetKeyDown("d"))
-        {
-            direction += new Vector2(1f, 0f);
-        }
-        if (Input.GetKeyDown("w"))
-        {
-            direction += new Vector2(0f, 1f);
-        }
-        if (Input.GetKeyDown("a"))
-        {
-            direction += new Vector2(-1f, 0f);
-        }
-        if (Input.GetKeyDown("s"))
-        {
-            direction += new Vector2(0f, -1f);
-        }
-
-        if (Input.GetKeyUp("d"))
-        {
-            direction += new Vector2(-1f, 0f);
-        }
-        if (Input.GetKeyUp("w"))
-        {
-            direction += new Vector2(0f, -1f);
-        }
-        if (Input.GetKeyUp("a"))
-        {
-            direction += new Vector2(1f, 0f);
-        }
-        if (Input.GetKeyUp("s"))
-        {
-            direction += new Vector2(0f, 1f);
-        }
-
-    }*/
-
     public void Move()
     {
         /*if (Input.GetKeyDown("j"))
@@ -102,7 +62,7 @@ public class EnemyMoveScript : MonoBehaviour
         if (Input.GetKeyDown("k"))
         {
             rb2d.AddForce(bigBoostPower * direction.normalized, ForceMode2D.Impulse);
-        }*/
+        }
         if(transform.position.x > -6.0f)
         {
             //direction.Set(-1.0f, 0.0f);
@@ -124,12 +84,16 @@ public class EnemyMoveScript : MonoBehaviour
             forcecounter++;
         }
         //rb2d.AddForce(bigBoostPower * direction, ForceMode2D.Impulse);
+        */
+    }
+
+    public void UpdateStrat(){
 
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log("ONCollider called.");
+
     }
 
 }
