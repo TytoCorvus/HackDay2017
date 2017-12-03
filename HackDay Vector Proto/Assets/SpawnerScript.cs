@@ -22,6 +22,7 @@ public class SpawnerScript : MonoBehaviour {
 	}
 
     public void Spawn(){
-
+        float xpos = Random.Range(-65f, 65f);
+        Instantiate(enemy, new Vector3(transform.position.x + xpos, transform.position.y, 0f), Quaternion.identity);
     }
 }

@@ -58,9 +58,8 @@ public class JetScript : MonoBehaviour {
     }
 
     public void OnTriggerEnter2D(Collider2D collider){
-        if(collider.name == "Enemy"){
-            Debug.Log("Jet thruster hit an enemy!");
-            collider.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Cos((angle/360f) * Mathf.PI * 2), Mathf.Sin((angle/360f) * Mathf.PI * 2)) * -100f, ForceMode2D.Impulse);
+        if(collider.tag == "Enemy"){
+            collider.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Cos((angle/360f) * Mathf.PI * 2), Mathf.Sin((angle/360f) * Mathf.PI * 2)) * -500f, ForceMode2D.Impulse);
         }
     }
 }

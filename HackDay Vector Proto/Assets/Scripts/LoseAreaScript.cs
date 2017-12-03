@@ -22,5 +22,8 @@ public class LoseAreaScript : MonoBehaviour {
             Time.timeScale = 0f;
             gameOverText.enabled = true;
         }
+        if(collider.tag == "Enemy"){
+            Destroy(collider.gameObject, 0f);
+        }
     }
 }

@@ -12,7 +12,7 @@ public class WallScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		scoreScript = GameObject.Find("ScoreText").GetComponent<ScoreScript>();
 	}
 	
 	// Update is called once per frame
@@ -27,7 +27,7 @@ public class WallScript : MonoBehaviour {
         }
         if(collider.tag == "Enemy"){
             Destroy(collider.gameObject, 0f);
-
+            scoreScript.AddToScore(10);
         }
     }
 }
