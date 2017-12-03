@@ -20,7 +20,7 @@ public class ScoreScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(lastScoreIncrease - Time.time > timeBetweenScoreIncrease){
+		if(Time.time - lastScoreIncrease > timeBetweenScoreIncrease){
             score++;
             lastScoreIncrease = Time.time;
         }
